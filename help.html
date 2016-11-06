@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>test</title>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr/event.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr/supplemental.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cldrjs/0.4.5/cldr/unresolved.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize/plural.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/globalize/1.1.1/globalize/number.js"></script>
+    <script src="bundle.js"></script>
+    <script>
+        function text() {
+            var val = $("#txt").val();
+
+            
+            Globalize.locale("en");
+            var formatter;
+            formatter = Globalize.numberFormatter();
+            console.log(formatter(3.141592));
+        }
+    </script>
+</head>
+<body>
+    <form name="fm">
+        <input type="text" id="txt" onclick="text();" />
+    </form>  
+</body>
+</html>
